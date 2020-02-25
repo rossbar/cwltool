@@ -174,3 +174,17 @@ $graph:
         The number of MPI processes to start. If you give a string,
         this will be evaluated as a CWL Expression and it must
         evaluate to an integer.
+
+- name: DockerGpuRequirement
+  type: record
+  inVocab: false
+  extends: cwl:ProcessRequirement
+  fields:
+    class:
+      type: string
+      doc: "Always 'DockerGpuRequirement'"
+      jsonldPredicate:
+        "_id": "@type"
+        "_type": "@vocab"
+    dockerGPU:
+      type: boolean
