@@ -186,5 +186,3 @@ $graph:
       jsonldPredicate:
         "_id": "@type"
         "_type": "@vocab"
-    dockerGPU:
-      type: boolean

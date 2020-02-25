@@ -1218,6 +1218,20 @@ $graph:
     inplaceUpdate:
       type: boolean
 
+- name: DockerGpuRequirement
+  type: record
+  extends: cwl:ProcessRequirement
+  doc: |
+    If present, specifies that Docker must be invoked with the '--gpus all'
+    command-line flags.
+  fields:
+    class:
+      type: string
+      doc: "Always 'DockerGpuRequirement'"
+      jsonldPredicate:
+        "_id": "@type"
+        "_type": "@vocab"
+
 - type: record
   name: ToolTimeLimit
   extends: ProcessRequirement
