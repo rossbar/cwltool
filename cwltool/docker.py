@@ -341,7 +341,6 @@ class DockerCommandLineJob(ContainerCommandLineJob):
                 runtime = [user_space_docker_cmd, "run"]
         else:
             runtime = ["docker", "run", "-i"]
-        if getattr(self, 'docker_gpu_flag', False):
             runtime.append('--gpus=all')
         self.append_volume(
             runtime, os.path.realpath(self.outdir), self.builder.outdir, writable=True
